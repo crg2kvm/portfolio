@@ -6,10 +6,9 @@ This directory contains various projects related to Operating Systems, demonstra
 ### Custom Built Shell:
 
 The Custom Built Shell Command Line project implements a simple yet functional command-line shell that mimics basic Unix shell functionalities. It supports command execution, input/output redirection, pipelining, and background process execution. The project includes the main shell driver, command parser, and command executor, demonstrating key concepts such as command parsing, process creation, and inter-process communication. This project provides a practical example of how an operating system shell operates at a fundamental level.
-### Process Scheduler:
+### Dynamic Page Allocation:
 
-Implements different process scheduling algorithms such as First-Come-First-Serve (FCFS), Shortest Job First (SJF), and Round Robin (RR).
-Illustrates how operating systems manage CPU time allocation among processes.
+The Dynamic Page Allocation project for the Xv6 operating system extends the Xv6 kernel to support dynamic page allocation. This includes implementing a system call for allocating and deallocating memory pages at runtime, allowing for more efficient memory management and utilization. The project demonstrates modifications to the Xv6 kernel to handle dynamic memory requests, showcasing the principles of virtual memory management and system call integration within a simple Unix-like operating system.
 ### Memory Manager:
 
 Simulates memory allocation and management techniques, including paging and segmentation.
