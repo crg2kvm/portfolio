@@ -11,3 +11,6 @@ This notebook focuses on linear classification techniques, specifically the Perc
 2
 ​
    regularization on model performance.
+### Naive Bayes
+
+This notebook includes exercises on basic probability, conditional probability, joint probability, and Bayes' Theorem. The notebook also includes a data visualization task, where a dataset is loaded containing hippocampus volumes of individuals, creating scatter plots to observe correlations between left and right hippocampus volumes, differentiated by dementia status. A Naive Bayes classifier is used to leverage these probabilities to classify dementia status based on hippocampus volume data.
