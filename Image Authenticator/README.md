@@ -13,4 +13,4 @@ Metadata Extraction: Extracts and displays metadata from images, such as the dat
 
 Database Integration: Uses SQLite for storing user data and image hashes with metadata.
 
-Developed by Axel Gyllenhoff and Cameron Greene
+### Developed by Axel Gyllenhoff and Cameron Greene
