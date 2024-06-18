@@ -9,14 +9,9 @@ The Custom Built Shell Command Line project implements a simple yet functional c
 ### Dynamic Page Allocation:
 
 The Dynamic Page Allocation project for the Xv6 operating system extends the Xv6 kernel to support dynamic page allocation. This includes implementing a system call for allocating and deallocating memory pages at runtime, allowing for more efficient memory management and utilization. The project demonstrates modifications to the Xv6 kernel to handle dynamic memory requests, showcasing the principles of virtual memory management and system call integration within a simple Unix-like operating system.
-### Memory Manager:
+### Lottery Scheduling:
 
-Simulates memory allocation and management techniques, including paging and segmentation.
-Shows how operating systems handle memory distribution and protection.
-### Shell Implementation:
-
-Develops a simple command-line shell that can execute basic commands and handle input/output redirection.
-Demonstrates command parsing, process creation, and inter-process communication.
+The Lottery Scheduling project for the Xv6 operating system implements a probabilistic scheduling algorithm that allocates CPU time to processes based on "lottery tickets." Each process is assigned a certain number of tickets, and the scheduler randomly selects a ticket to determine which process runs next. This project modifies the Xv6 kernel to support this lottery-based scheduling, providing a fair and randomized method for CPU allocation and demonstrating advanced process scheduling concepts within a simple Unix-like operating system.
 ### Synchronization Mechanisms:
 
 Implements synchronization primitives such as semaphores, mutexes, and condition variables.
