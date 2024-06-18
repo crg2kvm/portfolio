@@ -4,9 +4,13 @@ This project is a web-based image processing application developed using Flask, 
 
 ## Features
 User Authentication: Secure signup, login, and logout functionalities.
+
 Image Upload: Users can upload images, which are then converted to a unique hash for identification and comparison.
+
 Image Comparison: Compares two images to check if they are identical by comparing their hashes.
+
 Metadata Extraction: Extracts and displays metadata from images, such as the date taken and the camera model.
+
 Database Integration: Uses SQLite for storing user data and image hashes with metadata.
 
 Developed by Axel Gyllenhoff and Cameron Greene
