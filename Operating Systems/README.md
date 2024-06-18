@@ -12,7 +12,6 @@ The Dynamic Page Allocation project for the Xv6 operating system extends the Xv6
 ### Lottery Scheduling:
 
 The Lottery Scheduling project for the Xv6 operating system implements a probabilistic scheduling algorithm that allocates CPU time to processes based on "lottery tickets." Each process is assigned a certain number of tickets, and the scheduler randomly selects a ticket to determine which process runs next. This project modifies the Xv6 kernel to support this lottery-based scheduling, providing a fair and randomized method for CPU allocation and demonstrating advanced process scheduling concepts within a simple Unix-like operating system.
-### Synchronization Mechanisms:
+### Multithread Game of Life:
 
-Implements synchronization primitives such as semaphores, mutexes, and condition variables.
-Explores solutions to common concurrency problems like the Producer-Consumer and Readers-Writers problems.
+The MultiThread Game of Life project implements a multithreaded version of Conway's Game of Life, a cellular automaton simulation. This project leverages multithreading to enhance performance and efficiency, allowing the simulation to run concurrently across multiple threads. It demonstrates the use of thread synchronization and coordination to update the game grid, showcasing principles of parallel computing and concurrency control within an operating systems context.
