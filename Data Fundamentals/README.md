@@ -10,4 +10,4 @@ This notebook focuses on linear classification techniques, specifically the Perc
 ℓ 
 2
 ​
-  regularization on model performance.
+   regularization on model performance.
