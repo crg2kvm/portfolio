@@ -14,3 +14,7 @@ This notebook focuses on linear classification techniques, specifically the Perc
 ### Naive Bayes
 
 This notebook includes exercises on basic probability, conditional probability, joint probability, and Bayes' Theorem. The notebook also includes a data visualization task, where a dataset is loaded containing hippocampus volumes of individuals, creating scatter plots to observe correlations between left and right hippocampus volumes, differentiated by dementia status. A Naive Bayes classifier is used to leverage these probabilities to classify dementia status based on hippocampus volume data.
+### KNN and K Means Cluster
+
+
+This project involves implementing K-Nearest Neighbors (KNN) and K-Means Clustering algorithms to analyze and classify various datasets. For the 2D data points, K-Means Clustering initializes cluster centers, assigns data points to the nearest clusters, and iteratively updates the cluster centers until convergence, minimizing intra-cluster distances. Additionally, the K-Means algorithm is applied to the MNIST dataset, identifying and visualizing cluster centers representing different digit groups. The KNN classifier categorizes new data points based on their proximity to the nearest neighbors in the training set.
