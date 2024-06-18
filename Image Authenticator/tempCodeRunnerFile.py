@@ -274,4 +274,69 @@ def signup():
 def login():
     if request.method == 'POST':
         username = request.form['username']
-        password = request.form['password
+        password = request.form['password']
+
+        conn = sqlite3.connect('imagehashes.db')
+        c = conn.cursor()
+        c.execute('SELECT password FROM users WHERE username=?', (username,))
+        user = c.fetchone()
+        conn.close()
+
+        if user and check_password_hash(user[0], password):
+            session['username'] = username
+            return redirect(url_for('index'))
+
+        return 'Invalid username or password'
+    return render_template('login.html')
+
+@app.route('/my_uploads')
+def my_uploads():
+    if 'username' not in session:
+        return redirect(url_for('login'))  # Redirect to login if not logged in
+
+    username = session['username']
+    user_hashes = get_hashes_by_user(username)
+    return render_template('my_uploads.html', user_hashes=user_hashes)
+
+
+@app.route('/capture_and_upload')
+def capture_and_upload():
+    if 'username' not in session:
+        return redirect(url_for('login'))  # Redirect to login if not logged in
+
+    videoCaptureObject = cv2.VideoCapture(0)
+    ret, frame = videoCaptureObject.read()
+    videoCaptureObject.release()
+
+    if ret:
+        # Convert the captured frame to PIL Image
+        img = Image.fromarray(frame)
+
+        # Convert the Image to a string
+        imgByteArr = io.BytesIO()
+        img.save(imgByteArr, format='JPEG')
+        imgByteArr = imgByteArr.getvalue()
+        imgString = imageToString(io.BytesIO(imgByteArr))
+        metadata = get_image_metadata(imgByteArr)
+        print(metadata)
+        ip_address = request.remote_addr
+        #print("Here:",ip_address)
+        # Generate hash
+        image_hash = stringToHash(imgString)
+
+        # Save hash to database
+        username = session['username']
+        save_image_with_metadata1(username, image_hash, metadata, ip_address)
+        return 'Image captured and hash saved for user'
+    else:
+        return 'Failed to capture image'
+
+
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('index'))
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
